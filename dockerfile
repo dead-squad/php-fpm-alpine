@@ -110,5 +110,4 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin -
 # https://secure.php.net/manual/en/apcu.configuration.php
 # also, enable ioncube
 COPY    conf.d/* /usr/local/etc/php/conf.d/
-
 CMD     ["php-fpm"]
