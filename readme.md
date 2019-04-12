@@ -1,4 +1,10 @@
-# Docker PHP-FPM-ALPINE with php-redis & mongodb support
+# Docker PHP-FPM-ALPINE with php-redis & mongodb support 
+
+### PHP VERSION
+```sh
+$ php -v
+PHP 7.3.0
+```
 
 ### Build Command
 ```sh
