@@ -44,3 +44,4 @@ EXPOSE 9000
 
 COPY conf.d/* /usr/local/etc/php/conf.d/
 CMD ["php-fpm7", "-F"]
+
