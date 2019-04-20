@@ -12,7 +12,7 @@ $ cd php-fpm-alpine
 $ docker build --rm --no-cache -t deadsquad/php-fpm-alpine:latest ./
 ```
 
-### docker-ccompose.yml
+### docker-compose.yml
 ```yaml
 php:
   image: deadsquad/php-fpm-alpine
@@ -20,6 +20,4 @@ php:
     - 9000
   volumes:
     - basedir:/var/www/html
-    - ./php/php.ini:/usr/local/etc/php/php.ini
-    - .php/composer:/usr/local/bin/composer
 ```

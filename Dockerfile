@@ -43,5 +43,5 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin -
 EXPOSE 9000
 
 COPY conf.d/* /usr/local/etc/php/conf.d/
-CMD ["php-fpm7", "-F"]
+CMD ["php-fpm", "-F"]
 
