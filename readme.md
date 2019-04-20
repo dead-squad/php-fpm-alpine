@@ -16,8 +16,8 @@ $ docker build --rm --no-cache -t deadsquad/php-fpm-alpine:latest ./
 ```yaml
 php:
   image: deadsquad/php-fpm-alpine
-  expose:
-    - 9000
+  ports:
+    - 9000:9000
   volumes:
     - basedir:/var/www/html
 ```
