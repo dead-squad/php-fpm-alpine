@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:latest
 LABEL maintainer="Stu <stu@stewart.id>"
 
 ENV TIMEZONE=Asia/Jakarta
@@ -31,6 +31,7 @@ RUN apk update && \
     php7-json \
     php7-tokenizer \
     php7-xml \
+    php7-fileinfo \
     php7-pear && \
     pecl install mongodb && \
     rm -rf /var/cache/apk/* && \
