@@ -29,6 +29,7 @@ RUN apk update && \
     php7-pdo \
     php7-common \
     php7-json \
+    php7-intl \
     php7-tokenizer \
     php7-xml \
     php7-fileinfo \
