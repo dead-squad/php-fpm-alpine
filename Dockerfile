@@ -34,7 +34,6 @@ RUN apk update && \
     php7-xml \
     php7-fileinfo \
     php7-pear && \
-    docker-php-ext-install pdo_mysql && \
     pecl install mongodb && \
     rm -rf /var/cache/apk/* && \
     ln -s /usr/sbin/php-fpm7 /usr/sbin/php-fpm
