@@ -27,6 +27,7 @@ RUN apk update && \
     php7-zlib \
     php7-mysqlnd \
     php7-pdo \
+    php7-pdo_mysql \
     php7-common \
     php7-json \
     php7-intl \
