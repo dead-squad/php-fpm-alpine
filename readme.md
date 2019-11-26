@@ -1,4 +1,4 @@
-# Docker PHP-FPM-ALPINE with php-redis & mongodb support 
+# Docker PHP-FPM-ALPINE with php socket, php-redis & mongodb support 
 
 ### PHP VERSION
 ```sh
@@ -20,4 +20,9 @@ php:
     - 9000:9000
   volumes:
     - basedir:/var/www/html
+  volumes:
+    - basedir:/var/www/html
+    - ./php7/php.ini:/etc/php7/php.ini
+    - ./php7/www.conf:/etc/php7/php-fpm.d/www.conf
+    - "phpsocket:/socket"
 ```
