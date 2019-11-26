@@ -22,7 +22,6 @@ RUN apk update && \
     php7-gd \
     php7-redis \
     php7-mbstring \
-    php7-mysql \
     php7-mysqli \
     php7-gd \
     php7-zlib \
