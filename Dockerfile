@@ -10,7 +10,7 @@ RUN apk update && \
     curl \
     musl-dev \
     bash \
-    libmcrypt \
+    libmcrypt-dev \
     php7 \
     php7-dev \
     php7-fpm \
