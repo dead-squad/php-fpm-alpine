@@ -37,7 +37,7 @@ RUN apk update && \
     pecl install mongodb && \
     rm -rf /var/cache/apk/*
 
-COPY www.conf /usr/local/etc/php-fpm.d/www.conf
+COPY php-fpm.conf /usr/local/etc/php-fpm.d/php-fpm.conf
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
