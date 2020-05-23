@@ -35,7 +35,8 @@ RUN apk update && \
     php7-fileinfo \
     php7-pear && \
     pecl install mongodb && \
-    rm -rf /var/cache/apk/*
+    rm -rf /var/cache/apk/* && \
+    ln -s /usr/sbin/php-fpm7 /usr/sbin/php-fpm
 
 COPY php-fpm.conf /usr/local/etc/php-fpm.d/php-fpm.conf
 
