@@ -1,4 +1,4 @@
-FROM php:7.0.33-fpm-alpine
+FROM alpine:latest
 LABEL maintainer="Stu <stu@stewart.id>"
 
 ENV TIMEZONE=Asia/Jakarta
