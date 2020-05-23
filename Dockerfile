@@ -27,21 +27,24 @@ RUN apk update && \
     php7-zlib \
     php7-mysqlnd \
     php7-pdo \
+    php7-pdo_mysql \
     php7-common \
     php7-json \
+    php7-intl \
     php7-tokenizer \
     php7-xml \
-    php7-intl \
     php7-fileinfo \
     php7-pear && \
     pecl install mongodb && \
-    rm -rf /var/cache/apk/*
+    rm -rf /var/cache/apk/* && \
+    ln -s /usr/sbin/php-fpm7 /usr/sbin/php-fpm
 
-COPY www.conf /usr/local/etc/php-fpm.d/www.conf
+COPY php-fpm.conf /etc/php7/php-fpm.conf
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 
 EXPOSE 9000
 
-COPY conf.d/* /usr/local/etc/php/
+COPY conf.d/* /usr/local/etc/php/conf.d/
 CMD ["php-fpm", "-F"]
+
