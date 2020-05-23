@@ -10,11 +10,11 @@ RUN apk update && \
     curl \
     musl-dev \
     bash \
+    libmcrypt \
     php7 \
     php7-dev \
     php7-fpm \
     php7-curl \
-    php7-mcrypt \
     php7-phar \
     php7-zip \
     php7-openssl \
@@ -37,6 +37,9 @@ RUN apk update && \
     pecl install mongodb && \
     rm -rf /var/cache/apk/* && \
     ln -s /usr/sbin/php-fpm7 /usr/sbin/php-fpm
+
+RUN docker-php-ext-install mysqli pdo pdo_mysql mcrypt
+RUN docker-php-ext-enable mysqli
 
 COPY php-fpm.conf /usr/local/etc/php-fpm.d/php-fpm.conf
 
