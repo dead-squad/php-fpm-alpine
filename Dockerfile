@@ -34,7 +34,7 @@ RUN apk update && \
     php7-tokenizer \
     php7-xml \
     php7-fileinfo \
-    php7-ext-iconv \
+    php7-iconv \
     php7-pear && \
     pecl install mongodb && \
     rm -rf /var/cache/apk/* && \
