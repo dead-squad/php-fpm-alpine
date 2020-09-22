@@ -37,6 +37,7 @@ RUN apk update && \
     php7-iconv \
     php7-xmlrpc \
     php7-soap \
+    php7-dom \
     php7-cli \
     
     php7-pear && \
